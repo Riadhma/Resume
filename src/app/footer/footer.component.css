@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Arizonia');
+
+footer{
+    background-image: url('../../assets/images/1.jpg');
+}
+.footer-top { padding: 60px 0; text-align: left; color: #fff; color: rgba(255, 255, 255, 0.8); }
+
+.footerContainer{
+	margin: 0;
+	justify-content: center;
+}
+.footerContainer text{
+	margin: 0 auto;
+}
+
+
+.footer-top h3 { padding-bottom: 10px; color: #fff; font-family: Arizonia, cursive;
+    text-align: center;
+    font-size: 35px;
+	text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+	display: block;
+}
+
+.footer-top p{
+	color: white;
+}
+
+.footer-bottom { padding: 15px 0 17px 0; background: #444; text-align: left; color: #aaa; }
+
+.footer-social { padding-top: 3px; text-align: center; }
+.footer-social a { margin-left: 20px; color: rgb(204, 204, 204); border: 0; }
+.footer-social a:hover, .footer-social a:focus { color: #79a05f; border: 0; }
+.footer-social i { font-size: 24px; vertical-align: middle; }
+
+.footer-copyright { padding-top: 5px; }
+.footer-copyright a { color: #fff; border: 0; }
+.footer-copyright a:hover, .footer-copyright a:focus { color: #aaa; border: 0; }
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+		
+	.footer-top { padding: 40px 0; }
+	
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	
+	.inner-bg { padding: 180px 0; }
+	
+	.footer-top { padding: 40px 0; }
+	.footer-contact i { padding-right: 5px; }
+
+}
+
+@media (max-width: 767px) {
+
+	.inner-bg { padding: 100px 0 80px 0; }
+	
+	
+	.footer-top { padding: 40px 0; text-align: center; }
+	.footer-contact i { padding-right: 5px; }
+	.footer-bottom, .footer-social { text-align: center; }
+	.footer-social a { margin: 0 10px; }
+	
+}
+
+@media (max-width: 415px) {
+	
+	h1, h2 { font-size: 32px; }
+
+}
