@@ -181,10 +181,17 @@
     font-weight: 700;
 }
 
-.introduceMe h4{
+.aboutMe h4{
     font-size: 50px;
     font-weight: 700;
     color: rgb(243, 145, 89);
+}
+
+.aboutMe .introduceMe .mobileTitle{
+  display: none;
+}
+.aboutMe .introduceMe .desktopTitle{
+  display: block;
 }
 
 .introduceMe p{
@@ -222,12 +229,30 @@
     padding: 3em 0 ;
 }
 
+.workExperience .innerWork .workHeader{
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+
+.workExperience .experienceSection .divideWork{
+    width: 50%;
+    margin-right: 0;
+}
+
 .workExperience .experienceSection{
     margin: 2em 0;
 }
 .workExperience .experienceSection .date{
     font-family: 'Raleway', sans-serif;
 
+}
+
+.miniDivider{
+    margin-right: 0;
+    margin-left: auto;
+    width: 30px;
+    background: #b1b1b1;
+    height: 4px;
 }
 
 .workExperience .innerWork h2{
@@ -267,6 +292,10 @@
 .education .educationSection .date{
     font-family: 'Raleway', sans-serif;
 
+}
+.education .innerEducation .workHeader{
+    margin-top: 1em;
+    margin-bottom: 3em;
 }
 
 .education .innerEducation h2{
@@ -577,4 +606,142 @@ box-shadow: 0px 0px 25px -13px rgba(143,143,143,1);
     -webkit-box-shadow: 0px 0px 25px -13px rgba(143,143,143,1);
     -moz-box-shadow: 0px 0px 25px -13px rgba(143,143,143,1);
     box-shadow: 0px 0px 25px -13px rgba(143,143,143,1);
+}
+
+
+@media only screen and (max-width: 600px) {
+  .innerSlider{
+    padding-top: 8em;
+    margin: 0 1em;
+  }
+  .myName h3{
+    font-size: 30px;
+  }
+  .myName  h4,h6{
+      font-size: 20px;
+      font-weight: 700;
+  }
+  .leftSide{
+    margin: 0 auto;
+  }
+  .leftSide img{
+    width: 250px;
+    opacity: 0.9;
+    filter: brightness(100%);
+    filter: saturate(65%);
+  }
+  .basicInfo .innerInfo{
+    width: 295px;
+    padding: 1em 20px;
+  }
+  .aboutMe{
+    text-align: center;
+    padding: 8em 20px;
+  }
+  .aboutMe .aboutMePic img{
+    width: 225px; 
+  }
+  .aboutMe .introduceMe .mobileTitle{
+    display: block;
+  }
+  .aboutMe .introduceMe .desktopTitle{
+    display: none;
+  }
+  .aboutMe .introduceMe p{
+    text-align: justify;
+  }
+  .workExperience .innerWork{
+    margin: 0;
+    padding: 3em 1em;
+  }
+  .workExperience .innerWork .workHeader{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .workExperience .innerWork .workHeader h2{
+    font-size: 2em;
+  }
+
+  .workExperience .innerWork .workDate{
+    text-align: left;
+    padding: 0;
+  }
+
+  .workExperience .innerWork .experienceSection h3{
+    font-size: 24px;
+  }
+  .workExperience .innerWork .experienceSection .divideWork{
+    margin-left: 0;
+  }
+  .miniDivider{
+    margin-left: 0;
+  }
+  .workExperience .innerWork .description{
+    padding: 0;
+    border: 0;
+  }
+
+  .education .innerEducation{
+    margin: 0;
+    padding: 3em 1em;
+  }
+  .education .innerEducation .workHeader{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .education .innerEducation .workHeader h2{
+    font-size: 2em;
+  }
+  .education .educationSection .workDate .divideWork{
+    margin-left: 0;
+    width: 100px;
+  }
+  .education .innerEducation .experienceSection h3{
+    margin: 0;
+  }
+  .education .innerEducation .workDate{
+    text-align: left;
+    padding: 0;
+  }
+  .education .innerEducation .date{
+    font-size: 24px;
+  }
+
+  .education .innerEducation .description{
+    padding: 0;
+    border: 0;
+  }
+
+  .quotes{
+    text-align: center;
+  }
+
+  .testimonials{
+    margin-bottom: 0;
+  }
+
+  .knowledgee .innerKnowledgee{
+    padding: 0 1em;
+    margin: 0;
+  }
+
+  .knowledgee .innerKnowledgee h2{
+    font-size: 2em;
+  }
+
+  .knowledgee .innerKnowledgee .skillsSectionn{
+    margin: 2em 0;
+  }
+  .knowledgee  h3{
+    font-size: 24px;
+  }
+
+  .contactUs{
+    margin-top: 25em;
+  }
+
+  .contactUs h3{
+    font-size: 2.5em;
+  }
+  
 }
