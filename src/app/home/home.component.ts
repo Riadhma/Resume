@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as $ from 'jquery';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -15,21 +15,45 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    
-    document.addEventListener('DOMContentLoaded',function(event){
+    $(document).ready(function () {
+
+      $(".filter-button").click(function () {
+        var value = $(this).attr('data-filter');
+
+        if (value == "all") {
+          //$('.filter').removeClass('hidden');
+          $('.filter').show('1000');
+        }
+        else {
+          //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+          //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+          $(".filter").not('.' + value).hide('3000');
+          $('.filter').filter('.' + value).show('3000');
+
+        }
+      });
+
+      if ($(".filter-button").removeClass("active")) {
+        $(this).removeClass("active");
+      }
+      $(this).addClass("active");
+
+    });
+
+    document.addEventListener('DOMContentLoaded', function (event) {
       // array with texts to type in typewriter
-      var dataText = [ "Full Stack Developer.", "Software Developer.", "Designer." ];
-      
+      var dataText = ["Full Stack Developer.", "Software Developer.", "Designer."];
+
       // type one text in the typwriter
       // keeps calling itself until the text is finished
       function typeWriter(text, i, fnCallback) {
         // chekc if text isn't finished yet
         if (i < (text.length)) {
           // add next character to h1
-         document.querySelector(".try").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
-    
+          document.querySelector(".try").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+
           // wait for a while and call this function again for next character
-          setTimeout(function() {
+          setTimeout(function () {
             typeWriter(text, i + 1, fnCallback)
           }, 100);
         }
@@ -40,19 +64,19 @@ export class HomeComponent implements OnInit {
         }
       }
       // start a typewriter animation for a text in the dataText array
-       function StartTextAnimation(i) {
-         if (typeof dataText[i] == 'undefined'){
-            setTimeout(function() {
-              StartTextAnimation(0);
-            }, 2000);
-         }
-         // check if dataText[i] exists
+      function StartTextAnimation(i) {
+        if (typeof dataText[i] == 'undefined') {
+          setTimeout(function () {
+            StartTextAnimation(0);
+          }, 2000);
+        }
+        // check if dataText[i] exists
         if (i < dataText[i].length) {
           // text exists! start typewriter animation
-         typeWriter(dataText[i], 0, function(){
-           // after callback (and whole text has been animated), start next text
-           StartTextAnimation(i + 1);
-         });
+          typeWriter(dataText[i], 0, function () {
+            // after callback (and whole text has been animated), start next text
+            StartTextAnimation(i + 1);
+          });
         }
       }
       // start the text animation
@@ -62,7 +86,7 @@ export class HomeComponent implements OnInit {
     this.calculateAge();
   }
 
-  calculateAge(){
+  calculateAge() {
     this.age = this.currentDate - this.birthYear;
     return this.age;
   }
