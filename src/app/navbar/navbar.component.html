@@ -1,28 +1,31 @@
-<nav class="navbar fixed-top navbar-expand-md navbar-light bg-faded">
-    <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-faded" id="navbar">
+    
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#" style="color: white;">Home</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02" id="navbar-collapse">
+      <ul class="navbar-nav justify-content-end ml-auto mt-2 mt-lg-0">
+        <li class="nav-item ">
+          <a class="nav-link" (click)="navigateTo('home')">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link test" href="#">About</a>
+          <a class="nav-link " (click)="navigateTo('aboutme')">About me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" (click)="navigateTo('portfolio')">Portfolio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Experience</a>
+          <a class="nav-link" (click)="navigateTo('experience')">Experience</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pages</a>
+          <a class="nav-link" (click)="navigateTo('education')">Education</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" (click)="navigateTo('skills')">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navigateTo('contact')">Contact</a>
         </li>
       </ul>
     </div>

@@ -1,4 +1,5 @@
-<div class="home">
+<app-navbar (Navigate)="navigateTo($event)"></app-navbar>
+<div class="home" #home>
   <div class="slider">
     <div class="row innerSlider">
       <div class="col-md-7 rightSide">
@@ -7,13 +8,10 @@
           <h3>MY NAME IS <strong style="color: rgb(243, 145, 89);">RIADH</strong></h3>
           <h4><span class="try"></span></h4>
           <hr class="divider">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ab ad eligendi eos odit reprehenderit
-            aliquam autem tempora veritatis impedit asperiores saepe consectetur labore incidunt aut sint repellendus
-            nemo sapiente repudiandae exercitationem sit cumque corrupti, repellat eaque! Perspiciatis magni nulla ad
-            voluptate iure fugiat dolorem dicta, quasi tempora deserunt amet?</p>
-          <div class="readMore">
+          <p style="font-size: 19px;">Welcome to my resume website. I hope that you like the content :)</p>
+          <!-- <div class="readMore">
             <button>Read More</button>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="col-md-5 leftSide">
@@ -60,7 +58,7 @@
   </div>
 
 
-  <div class="aboutMe">
+  <div class="aboutMe" #aboutme>
     <h4 class="mobileTitle">ABOUT MYSELF</h4>
     <div class="row">
       <div class="col-md-6 aboutMePic">
@@ -68,14 +66,14 @@
       </div>
       <div class="col-md-6 introduceMe">
         <h4 class="desktopTitle">ABOUT MYSELF</h4>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis id modi est iure consequuntur aperiam
-          voluptas magnam facilis, neque minima doloribus delectus numquam amet deleniti eligendi dolorum, sunt aut
-          quidem libero voluptatum sequi, incidunt corrupti error. Optio, quaerat. Labore consequuntur reprehenderit
-          veritatis sint quis exercitationem sed. Doloribus a culpa dicta eveniet alias, fugiat nam fugit, labore
-          quibusdam, ducimus commodi dolorem? Porro, modi! Molestias, debitis saepe ab qui autem aliquid delectus
-          dolores nisi perspiciatis cum beatae fugit nulla quia necessitatibus eum veritatis, eius sunt obcaecati
-          officia quasi vel reiciendis ducimus alias ipsum! Sapiente, maiores similique perferendis esse a et nesciunt
-          voluptatem.</p>
+        <p>I am a Developer with industry experience building software, web and mobile applications. I worked on plenty of projects with people from different backgrounds.<br />
+
+          My specialties include quickly learning new skills and programming languages, problem solving, application optimization. I'm still enthusiastically grabbing onto any other programming languages, frameworks, or principles i can integrate into the coding Software, Web and Mobile in my head.<br />
+          
+          in Addition i'm experienced on designing in which i'm able to work and create lot of things (logos, flyers, business cards, posters...) with Adobe Photoshop and Adobe Illustrator.<br />
+          
+          I am a hard-worker, motivated, fast learner, a team player and work tirelessly to get the job done. I strive for success.
+          </p>
         <div class="download">
           <a href="assets/pdf/RiadhMazgouCV.pdf" download="RiadhMazgouCV">Download CV <i
               class="fas fa-download"></i></a>
@@ -88,79 +86,159 @@
     <div class="inclinedBar"></div>
   </div>
 
-  <div class="portfolio">
+  <div class="portfolio" #portfolio>
     <h1 class="gallery-title">Portfolio</h1>
 
       <div class="filterButtons">
-        <button class="btn btn-default filter-button" data-filter="all">All</button>
-        <button class="btn btn-default filter-button" data-filter="hdpe">HDPE Pipes</button>
-        <button class="btn btn-default filter-button" data-filter="sprinkle">Sprinkle Pipes</button>
-        <button class="btn btn-default filter-button" data-filter="spray">Spray Nozzle</button>
-        <button class="btn btn-default filter-button" data-filter="irrigation">Irrigation Pipes</button>
+        <button class="btn btn-default filter-button" data-filter="all" (click)="loadMore()">All</button>
+        <button class="btn btn-default filter-button" data-filter="web" (click)="loadMore()">Web Development</button>
+        <button class="btn btn-default filter-button" data-filter="desktop" (click)="loadMore()">Desktop Development</button>
+        <button class="btn btn-default filter-button" data-filter="logo" (click)="loadMore()">Logo Design</button>
+        <button class="btn btn-default filter-button" data-filter="flyers" (click)="loadMore()">Flyers, posters & Business cards</button>
       </div>
       <br />
 
-      <div class="container">
+      <div class="gallery">
         <div class="row"> 
-          <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+          <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter flyers">
+            <img src="assets/images/forResume/poster7.jpg" class="img-responsive ImgThumbnail">
+          </div>
+    
+          <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter logo">
+            <img src="assets/images/forResume/logo9.jpg" class="img-responsive ImgThumbnail">
+          </div>
+    
+          <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter web">
+            <img src="assets/images/forResume/interface1.jpg" class="img-responsive ImgThumbnail">
+          </div>
+    
+          <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter flyers">
+            <img src="assets/images/forResume/poster2.jpg" class="img-responsive ImgThumbnail">
+          </div>
+    
+          <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter flyers">
+            <img src="assets/images/forResume/carteVisite4.jpg" class="img-responsive ImgThumbnail">
+          </div>
+    
+          <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter flyers">
+            <img src="assets/images/forResume/flyer2.jpg" class="img-responsive ImgThumbnail">
+          </div>
+    
+          <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter logo">
+            <img src="assets/images/forResume/logo3.jpg" class="img-responsive ImgThumbnail">
+          </div>
+    
+          <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter web">
+            <img src="assets/images/forResume/interface4.jpg" class="img-responsive ImgThumbnail">
           </div>
 
-          <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+        </div>
+        <span id="more">
+        <div class="row">
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter flyers">
+            <img src="assets/images/forResume/poster8.jpg" class="img-responsive ImgThumbnail">
+          </div>
+    
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter logo">
+            <img src="assets/images/forResume/logo5.jpg" class="img-responsive ImgThumbnail">
+          </div>
+    
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter flyers">
+            <img src="assets/images/forResume/flyer1.jpg" class="img-responsive ImgThumbnail">
+          </div>
+    
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter logo">
+            <img src="assets/images/forResume/logo10.jpg" class="img-responsive ImgThumbnail">
           </div>
 
-          <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter flyers">
+            <img src="assets/images/forResume/carteVisite2.jpg" class="img-responsive ImgThumbnail">
           </div>
 
-          <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter logo">
+            <img src="assets/images/forResume/logo6.jpg" class="img-responsive ImgThumbnail">
           </div>
 
-          <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter web">
+            <img src="assets/images/forResume/interface2.jpg" class="img-responsive ImgThumbnail">
           </div>
 
-          <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter flyers">
+            <img src="assets/images/forResume/afterEffect.jpg" class="img-responsive ImgThumbnail">
           </div>
 
-          <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter flyers">
+            <img src="assets/images/forResume/poster4.jpg" class="img-responsive ImgThumbnail">
           </div>
 
-          <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter logo">
+            <img src="assets/images/forResume/logo2.jpg" class="img-responsive ImgThumbnail">
           </div>
 
-          <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter flyers">
+            <img src="assets/images/forResume/poster3.jpg" class="img-responsive ImgThumbnail">
           </div>
 
-          <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter flyers">
+            <img src="assets/images/forResume/carteVisite1.jpg" class="img-responsive ImgThumbnail">
           </div>
 
-          <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter logo">
+            <img src="assets/images/forResume/logo1.jpg" class="img-responsive ImgThumbnail">
           </div>
 
-          <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter logo">
+            <img src="assets/images/forResume/logo4.jpg" class="img-responsive ImgThumbnail">
+          </div>
+
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter web">
+            <img src="assets/images/forResume/interface3.jpg" class="img-responsive ImgThumbnail">
+          </div>
+
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter flyers">
+            <img src="assets/images/forResume/poster5.jpg" class="img-responsive ImgThumbnail">
+          </div>
+
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter logo">
+            <img src="assets/images/forResume/logo8.jpg" class="img-responsive ImgThumbnail">
+          </div>
+
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter flyers">
+            <img src="assets/images/forResume/poster9.jpg" class="img-responsive ImgThumbnail">
+          </div>
+
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter desktop">
+            <img src="assets/images/forResume/interface5.jpg" class="img-responsive ImgThumbnail">
+          </div>
+
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter logo">
+            <img src="assets/images/forResume/logo7.jpg" class="img-responsive ImgThumbnail">
+          </div>
+
+          <div class="gallery_product more col-lg-3 col-md-3 col-sm-3 col-xs-6 filter flyers">
+            <img src="assets/images/forResume/poster6.jpg" class="img-responsive ImgThumbnail">
           </div>
         </div>
+      </span>
+        <button class="btn btn-primary" (click)="loadMore()" id="link">Load more</button>
     </div>
   </div>
 
-  <div class="workExperience">
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <!-- <div id="caption"></div> -->
+  </div>
+
+  <div class="workExperience" #experience>
     <div class="innerWork">
       <div class="workHeader">
         <h2>WORK EXPERIENCE</h2>
         <!-- <p>I'm looking to expand my portfolio while I'm on top and while I'm young.</p> -->
       </div>
       <div class="row experienceSection">
-        <div class="col-xs-4 workDate">
+        <div class="col-md-4 workDate">
           <h3 style="color: #27acc1; text-transform: uppercase;">Software Developer</h3>
           <hr class="divideWork" />
           <p style="color: #6c757d;">Gesellschaft für Integrierte Systemplanung mbH</p>
@@ -168,7 +246,7 @@
           <hr class="miniDivider">
           <p class="date">08/2019 - 07/2020</p>
         </div>
-        <div class="col-xs-8 description">
+        <div class="col-md-8 description">
           <h5 style="color: #0f283e; text-transform: uppercase; margin-bottom: 25px;">Description</h5>
           <p style="color: #577285;" class="paragraphDescription">Developing Software Solutions for Enterprise Asset
             Management systems working with technologise like Java, Javascript, SQL...<br>The solutions are to implement
@@ -246,7 +324,7 @@
       </div>
     </div>
   </div>
-  <div class="education">
+  <div class="education" #education>
     <div class="innerEducation">
       <div class="workHeader">
         <h2>EDUCATION</h2>
@@ -300,7 +378,7 @@
       </div>
     </div>
   </div>
-  <div class="knowledgee">
+  <div class="knowledgee" #skills>
     <div class="innerKnowledgee">
       <h2>Skills & Knowledge</h2>
       <div class="skillsSectionn">
@@ -517,7 +595,7 @@
       <img src="assets/images/ffff.png" alt="">
     </div>
   </div> -->
-  <div class="contactUs">
+  <div class="contactUs" #contact>
     <h3>Contact Me</h3>
     <div class="innerContact row">
       <div class="col-md-3 emailMe">
@@ -544,7 +622,7 @@
           <span><i class="fas fa-phone-alt" style="font-size: 22px;"></i></span>
         </div>
         <h5>Call Me</h5>
-        <p>+49 0160 99290878</p>
+        <p>+216 20657603</p>
       </div>
     </div>
   </div>
